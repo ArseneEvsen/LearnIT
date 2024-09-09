@@ -1,0 +1,217 @@
+/* =========== BASE =========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgba(128, 128, 128, 0.644);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: rgb(47, 95, 226);
+}
+
+/* =========== NAVBAR =========== */
+
+header {
+    position: relative;
+    padding: 0 2rem;
+    background-color: white;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: rgb(47, 95, 226);
+}
+
+.navbar .links {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.navbar .burger-menu-button {
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.contact-btn {
+    border: 1px solid;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+/* =========== BURGER MENU =========== */
+
+.burger-menu {
+    display: none;
+    height: 0px;
+    margin-top: 5px;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s;
+}
+
+.burger-menu.open {
+    height: 215px;
+}
+
+.burger-menu li a{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.burger-menu li a:hover{
+    color: rgb(47, 95, 226);
+}
+.burger-menu .contact-btn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.divider {
+    height: 1px;
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+/* =========== HERO SECTION =========== */
+
+.hero {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url('https://images.pexels.com/photos/7681667/pexels-photo-7681667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-title {
+    padding-left: 10%;
+    padding-bottom: 1%;
+    font-size: 4rem;
+    color: rgb(47, 95, 226);
+}
+
+.hero-text {
+    font-size: 1.5rem;
+    color: black;
+    padding-left: 10%;
+    padding-bottom: 15%;
+}
+
+.important-word{
+    color: white;
+}
+
+.courses-section {
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+/* =========== COURSES SECTION =========== */
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    margin-top: 50px;
+    white-space: nowrap;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 20s slide infinite linear;
+}
+
+.logos-slide img {
+    height: 80px;
+    margin: 0 60px;
+}
+
+/* =========== RESPONSIVE =========== */
+
+@media (max-width: 990px) {
+    .navbar .links,
+    .navbar .action-button, 
+    .navbar .contact-btn {
+        display: none;
+    }
+
+    .navbar .burger-menu-button {
+        display: block;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .burger-menu {
+        left: 2rem;
+        width: unset;
+    }
+    
+}
